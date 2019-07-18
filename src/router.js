@@ -4,6 +4,10 @@ import Router from 'vue-router'
 import login from "./components/login.vue"
 //导入 home 组件
 import home from "./components/home.vue"
+//导入后台 welcome 组件
+import welcome from "./components/welcome.vue"
+//用户列表页
+import users from "./components/User/users.vue"
 
 //vue 去全局匹配路由
 Vue.use(Router)
@@ -12,9 +16,13 @@ Vue.use(Router)
 
 var router = new Router({
 	routes: [
-		{path:"/",redirect: "/login"},
+		{path:"/",redirect: "/welcome"},
 		{path: "/login", component: login },
-		{path: "/home", component: home },
+		{path: "/home", component: home, redirect: "/welcome", children: [
+			{path: "/welcome", component: welcome},
+			{path: "/users", component: users},
+		]},
+
 	]
 })
 

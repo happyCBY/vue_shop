@@ -10,13 +10,25 @@ import "./assets/fonts/iconfont.css"
 //导入axios发送请求模块
 import axios from "axios"
 
+
 //配置全局路径
 axios.defaults.baseURL = "http://127.0.0.1:8888/api/private/v1/";
 
+//请求拦截器
+//axios请求拦截器
+axios.interceptors.request.use(function (config) {
+  config.headers.Authorization = window.sessionStorage.getItem("token");
+
+  return config;
+}, function (error) {
+  console.log(error)
+})
+
+
 //axios响应拦截器
-axios.interceptors.response.use(function(config){
+axios.interceptors.response.use(function (config) {
   return config.data;
-},function(error){
+}, function (error) {
   console.log(error)
 })
 

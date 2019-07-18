@@ -70,6 +70,7 @@ export default {
         }
         //获得后台返回的数据
         var data = await this.$http.post('/login', this.loginForm)
+        if(data.meta.status != 200) return this.$message.error('账号不存在或密码错误')
         //将token保存在 浏览器的 sessionStorage 中
         window.sessionStorage.setItem('token', data.data.token)
         //消息弹框
