@@ -12,7 +12,7 @@ import users from "./components/User/Users.vue"
 import rights from "./components/power/Rights.vue"
 //用户角色列表页
 import roles from "./components/power/Rules.vue"
-//vue 去全局匹配路由
+//vue 全局匹配路由
 Vue.use(Router)
 
 
