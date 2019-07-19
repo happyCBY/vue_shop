@@ -41,13 +41,30 @@ import { Pagination } from 'element-ui'
 import { Tooltip } from 'element-ui'
 
 //loading 加载
-import {Loading} from 'element-ui'
+import { Loading } from 'element-ui'
 
 //对话框
-import {Dialog} from 'element-ui'
+import { Dialog } from 'element-ui'
 
 //MessageBox 弹框
 import { MessageBox } from 'element-ui';
+
+//卡片
+import { card } from 'element-ui'
+
+//标签框
+import { tag } from 'element-ui'
+// 栅格系统
+import { row } from 'element-ui'
+import { col } from 'element-ui'
+
+// 树形控件
+import { tree } from 'element-ui'
+
+//下拉框
+import { select } from 'element-ui'
+import { option } from 'element-ui'
+
 
 Vue.use(Button)
 Vue.use(Form)
@@ -71,7 +88,13 @@ Vue.use(Pagination)
 Vue.use(Tooltip)
 Vue.use(Loading)
 Vue.use(Dialog)
-
+Vue.use(card)
+Vue.use(tag)
+Vue.use(col)
+Vue.use(row)
+Vue.use(tree)
+Vue.use(select)
+Vue.use(option)
 //全局挂载
 
 Vue.prototype.$message = Message

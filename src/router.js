@@ -1,17 +1,19 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 //导入  登录页面 组件
-import login from "./components/login.vue"
+import login from "./components/Login.vue"
 //导入 home 组件
-import home from "./components/home.vue"
+import home from "./components/Home.vue"
 //导入后台 welcome 组件
-import welcome from "./components/welcome.vue"
+import welcome from "./components/Welcome.vue"
 //用户列表页
-import users from "./components/User/users.vue"
-
+import users from "./components/User/Users.vue"
+//用户权限页
+import rights from "./components/power/Rights.vue"
+//用户角色列表页
+import roles from "./components/power/Rules.vue"
 //vue 去全局匹配路由
 Vue.use(Router)
-
 
 
 var router = new Router({
@@ -21,6 +23,8 @@ var router = new Router({
 		{path: "/home", component: home, redirect: "/welcome", children: [
 			{path: "/welcome", component: welcome},
 			{path: "/users", component: users},
+			{path: "/rights", component: rights},
+			{path: "/roles", component: roles},
 		]},
 
 	]

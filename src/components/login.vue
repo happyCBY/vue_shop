@@ -3,7 +3,9 @@
     <!-- 登录框 -->
     <div class="login_box">
       <!-- 圆形图标 -->
-      <div class="login_logo"></div>
+      <div class="login_logo">
+        <img :src="url" alt="">
+      </div>
       <!-- 登录框 -->
       <div>
         <!-- ref获得element-ui提供的表单对象，可以使用 this.$refs.loginReset.方法 调用 -->
@@ -21,12 +23,15 @@
               v-model="loginForm.username"
             ></el-input>
           </el-form-item>
+
           <el-form-item prop="password">
             <el-input
               placeholder="请输入密码"
               prefix-icon="iconfont icon-3702mima"
               show-password
               v-model="loginForm.password"
+              @blur="getBlueImgUrl"
+              @focus="getFocusImgUrl"
             ></el-input>
           </el-form-item>
           <el-form-item class="vue-button">
@@ -57,12 +62,15 @@ export default {
           { required: true, message: '请输入密码', trigger: 'blur' },
           { min: 6, max: 15, message: '长度在 6 到 15 个字符', trigger: 'blur' }
         ]
-      }
+      },
+      url: require("../assets/logo.png")
     }
   },
   methods: {
     //提交按钮
     submitForm: function() {
+      console.log(11);
+
       //判断表单所有输入项验证是否成功，成功valid返回 true 失败返回 false
       this.$refs.loginReset.validate(async valid => {
         if (!valid) {
@@ -76,13 +84,19 @@ export default {
         //消息弹框
         this.$message.success('登录成功')
         //跳转页面
-        this.$router.push('/home')
+        this.$router.push('/')
       })
     },
     //重置按钮
     reset: function() {
       //重置输入框以及验证信息
       this.$refs.loginReset.resetFields()
+    },
+    getBlueImgUrl: function (){
+      this.url = require("../assets/logo.png")
+    },
+    getFocusImgUrl: function(){
+      this.url = require("../../public/uploads/5d88ce36acaf2edd4453a9d2811001e9380193e9.gif")
     }
   },
   name: 'login'
@@ -111,9 +125,15 @@ export default {
       border: 8px solid #fff;
       box-shadow: 0px 0px 10px #ddd;
       border-radius: 50%;
-      background-image: url('../assets/logo.png ');
+      // background-image: url('../../public/uploads/5d88ce36acaf2edd4453a9d2811001e9380193e9.gif');
       background-size: cover;
       background-color: rgb(238, 238, 238);
+
+      img {
+       width: 100%;
+       height: 100%;
+       border-radius: 50%;
+      }
     }
 
     .login_form {
