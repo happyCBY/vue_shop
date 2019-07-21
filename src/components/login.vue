@@ -28,7 +28,7 @@
             <el-input
               placeholder="请输入密码"
               prefix-icon="iconfont icon-3702mima"
-              show-password
+              type = "password"
               v-model="loginForm.password"
               @blur="getBlueImgUrl"
               @focus="getFocusImgUrl"

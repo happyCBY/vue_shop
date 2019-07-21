@@ -64,7 +64,8 @@ import { tree } from 'element-ui'
 //下拉框
 import { select } from 'element-ui'
 import { option } from 'element-ui'
-
+//级联选择器
+import { cascader } from 'element-ui'
 
 Vue.use(Button)
 Vue.use(Form)
@@ -95,6 +96,7 @@ Vue.use(row)
 Vue.use(tree)
 Vue.use(select)
 Vue.use(option)
+Vue.use(cascader)
 //全局挂载
 
 Vue.prototype.$message = Message

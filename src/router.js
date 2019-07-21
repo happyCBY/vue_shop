@@ -12,6 +12,9 @@ import users from "./components/User/Users.vue"
 import rights from "./components/power/Rights.vue"
 //用户角色列表页
 import roles from "./components/power/Rules.vue"
+//商品分类页
+import categories from "./components/goods/categories.vue"
+
 //vue 全局匹配路由
 Vue.use(Router)
 
@@ -22,9 +25,14 @@ var router = new Router({
 		{path: "/login", component: login },
 		{path: "/home", component: home, redirect: "/welcome", children: [
 			{path: "/welcome", component: welcome},
+			//用户列表页
 			{path: "/users", component: users},
+			//权限列表页
 			{path: "/rights", component: rights},
+			//角色列表页
 			{path: "/roles", component: roles},
+			//商品分类页
+			{path: "/categories", component: categories},
 		]},
 
 	]

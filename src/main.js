@@ -9,6 +9,10 @@ import "./assets/css/global.css"
 import "./assets/fonts/iconfont.css"
 //导入axios发送请求模块
 import axios from "axios"
+//树形表格
+import treeTable from 'vue-table-with-tree-grid'
+
+Vue.component("treeTable",treeTable)
 
 
 //配置全局路径
