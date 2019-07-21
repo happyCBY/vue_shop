@@ -13,7 +13,7 @@ import rights from "./components/power/Rights.vue"
 //用户角色列表页
 import roles from "./components/power/Rules.vue"
 //商品分类页
-import categories from "./components/goods/categories.vue"
+import categories from "./components/goods/Categories.vue"
 
 //vue 全局匹配路由
 Vue.use(Router)
