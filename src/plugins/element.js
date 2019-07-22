@@ -66,7 +66,11 @@ import { select } from 'element-ui'
 import { option } from 'element-ui'
 //级联选择器
 import { cascader } from 'element-ui'
-
+//alert警告
+import { alert } from 'element-ui'
+//tabs标签页
+import { tabs } from 'element-ui'
+import { tabPane } from 'element-ui'
 Vue.use(Button)
 Vue.use(Form)
 Vue.use(FormItem)
@@ -97,6 +101,9 @@ Vue.use(tree)
 Vue.use(select)
 Vue.use(option)
 Vue.use(cascader)
+Vue.use(alert)
+Vue.use(tabs)
+Vue.use(tabPane)
 //全局挂载
 
 Vue.prototype.$message = Message
