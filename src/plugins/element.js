@@ -79,6 +79,9 @@ import { checkboxGroup } from 'element-ui'
 import { checkbox } from 'element-ui'
 //图片上传
 import { upload } from 'element-ui'
+//时间线
+import { timeline } from 'element-ui'
+import { timelineItem } from 'element-ui'
 Vue.use(Button)
 Vue.use(Form)
 Vue.use(FormItem)
@@ -117,6 +120,8 @@ Vue.use(step)
 Vue.use(checkbox)
 Vue.use(checkboxGroup)
 Vue.use(upload)
+Vue.use(timeline)
+Vue.use(timelineItem)
 //全局挂载
 
 Vue.prototype.$message = Message

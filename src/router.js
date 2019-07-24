@@ -20,6 +20,8 @@ import params from "./components/goods/Params.vue"
 import list from "./components/goods/List.vue"
 //添加商品页面
 import add from "./components/goods/Add.vue"
+//订单管理页面
+import orders from "./components/order/Order.vue"
 //vue 全局匹配路由
 Vue.use(Router)
 
@@ -40,7 +42,8 @@ var router = new Router({
 			{path: "/categories", component: categories},
 			{path: "/params", component: params},
 			{path: "/goods", component: list},
-			{path: "/goods/add", component: add}
+			{path: "/goods/add", component: add},
+			{path: "/orders", component: orders},
 		]},
 
 	]
