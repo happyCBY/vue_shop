@@ -16,6 +16,10 @@ import roles from "./components/power/Rules.vue"
 import categories from "./components/goods/Categories.vue"
 //商品分类参数页面
 import params from "./components/goods/Params.vue"
+//商品列表参数页面
+import list from "./components/goods/List.vue"
+//添加商品页面
+import add from "./components/goods/Add.vue"
 //vue 全局匹配路由
 Vue.use(Router)
 
@@ -34,7 +38,9 @@ var router = new Router({
 			{path: "/roles", component: roles},
 			//商品分类页
 			{path: "/categories", component: categories},
-			{path: "/params", component: params}
+			{path: "/params", component: params},
+			{path: "/goods", component: list},
+			{path: "/goods/add", component: add}
 		]},
 
 	]

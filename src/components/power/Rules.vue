@@ -174,7 +174,6 @@ export default {
 
             //遍历数组把所有id拿出来
 			this.getPowerID(powerList.children)
-
             this.showSetNewPower = true
 		},
 

@@ -69,7 +69,6 @@ export default {
   methods: {
     //提交按钮
     submitForm: function() {
-      console.log(11);
 
       //判断表单所有输入项验证是否成功，成功valid返回 true 失败返回 false
       this.$refs.loginReset.validate(async valid => {

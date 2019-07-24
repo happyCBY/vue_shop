@@ -71,6 +71,14 @@ import { alert } from 'element-ui'
 //tabs标签页
 import { tabs } from 'element-ui'
 import { tabPane } from 'element-ui'
+//步骤条
+import { steps } from 'element-ui'
+import { step } from 'element-ui'
+//多选框
+import { checkboxGroup } from 'element-ui'
+import { checkbox } from 'element-ui'
+//图片上传
+import { upload } from 'element-ui'
 Vue.use(Button)
 Vue.use(Form)
 Vue.use(FormItem)
@@ -104,6 +112,11 @@ Vue.use(cascader)
 Vue.use(alert)
 Vue.use(tabs)
 Vue.use(tabPane)
+Vue.use(steps)
+Vue.use(step)
+Vue.use(checkbox)
+Vue.use(checkboxGroup)
+Vue.use(upload)
 //全局挂载
 
 Vue.prototype.$message = Message
