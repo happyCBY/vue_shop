@@ -22,6 +22,8 @@ import list from "./components/goods/List.vue"
 import add from "./components/goods/Add.vue"
 //订单管理页面
 import orders from "./components/order/Order.vue"
+//数据统计页面
+import reports from "./components/report/Report.vue"
 //vue 全局匹配路由
 Vue.use(Router)
 
@@ -44,6 +46,7 @@ var router = new Router({
 			{path: "/goods", component: list},
 			{path: "/goods/add", component: add},
 			{path: "/orders", component: orders},
+			{path: "/reports", component: reports},
 		]},
 
 	]
